@@ -1,0 +1,70 @@
+*{
+    /* this is what puts margins between the boxes */
+    margin: 0px;
+}
+
+body{
+    font-size: 24px;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-header-1{
+    background-color: rgb(38, 49, 49);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: Arial;
+}
+
+.flex-header-2{
+    list-style: none;
+    background-color: rgb(29, 37, 37);
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    text-align: justify;
+    display: inline;
+}
+/* this is makes our directory list horizontal */
+#directory-Menu li{
+    display: inline;
+}
+
+.flex-main{
+    display: flex;
+    flex: 1;
+}
+
+.right-sidebar{
+    background-color: rgb(90, 69, 69);
+    padding-top: 3rem;
+    flex: 1 1 5rem;
+}
+
+.main-content{
+    background-color: rgb(129, 139, 129);
+    padding-top: 3rem;
+    flex: 3 3 ;
+}
+
+.left-sidebar{
+    background-color: rgb(166, 181, 250);
+    padding-top: 3rem;
+    flex: 1 1 5rem;
+}
+
+.flex-footer{
+    background-color: rgb(19, 36, 36);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* This will make the flex boxes stack when smaller than width */
+@media all and (max-width: 540px){
+    .flex-main {
+        flex-direction: column;
+    }
+}

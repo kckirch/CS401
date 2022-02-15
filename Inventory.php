@@ -1,3 +1,4 @@
+<html>
 <html lang="en"></html>
 <head>
     <title>Rinventory</title>
@@ -5,8 +6,7 @@
 </head>
 
 <body>
-
-    <header class="flex-header-1">
+<header class="flex-header-1">
         <h1>Rinventory</h1>
         <hr>
     </header>
@@ -51,13 +51,4 @@
     </footer>
 
 </body>
-
-
-
-    
-        
-
-    
-
-
-</html>
+<html>
