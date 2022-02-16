@@ -3,6 +3,7 @@
     margin: 0px;
     
 }
+
 @import url(//db.onlinewebfonts.com/c/03d5b20d124cd26dc873bd4a8e42313e?family=Suisse+Int);
 
 body{
@@ -52,6 +53,9 @@ body{
     flex: 1;
 }
 
+.inventory_box{
+    margin: 10px 10px;
+}
 .right-sidebar{
     background-color: #E5E4E2;
     padding-top: 3rem;
