@@ -47,8 +47,8 @@
             Item | Purchase Price | Sale Price | Notes
             <br><br>
 
-            <?php 
-                
+            <?php
+            
             ?>
 
             <form method="POST" action="inventory_handler.php">
@@ -73,7 +73,7 @@
                 </thead>
                 <tbody>
                 <?php
-                    $contents = file_get_contents("posted_inventory.txt");
+                    $contents = file_get_contents("posted_inventory.txt"); 
                     $inventory_Lists = explode("\n", trim($contents));
                     foreach ($inventory_Lists as $inventory_List) {
                         list($brand, $style) = explode("|", trim($inventory_List));
