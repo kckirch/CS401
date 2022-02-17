@@ -8,7 +8,7 @@
 
 <header class="flex-header-1">
         
-        <img src="/art/headerLogo.png" alt="logo" />
+        <img src="/art/headerLogo.png" alt="logo"/>
         <hr> 
     </header>
 
