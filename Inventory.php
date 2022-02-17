@@ -21,7 +21,7 @@
                 </li>
                <li>
                     <a href="/inventory.php">Inventory </a>
-                </li>
+                </li> 
                <li>
                     <a href="/login.php">Login </a>
                 </li>
