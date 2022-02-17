@@ -47,7 +47,7 @@
             Item | Purchase Price | Sale Price | Notes
             <br><br>
 
-            <?php
+            <?php 
                 
             ?>
 

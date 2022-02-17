@@ -10,7 +10,7 @@
         
         <img src="/art/headerLogo.png" alt="logo" />
         <hr>
-    </header>
+    </header>  
 
     <header class="flex-header-2">
         <div id="directory-Menu">

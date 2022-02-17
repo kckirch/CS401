@@ -3,7 +3,7 @@
     <title>Rinventory</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+ 
 <body>
 
 <header class="flex-header-1">
