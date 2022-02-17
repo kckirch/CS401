@@ -41,15 +41,11 @@
 
         <article class="main-content">
             Your Inventory
-            <br> <br>
+            <br>
             A table will go here
-            <br><br>
+            <br>
             Item | Purchase Price | Sale Price | Notes
-            <br><br>
-
-            <?php
             
-            ?>
 
             <form method="POST" action="inventory_handler.php">
             <div class="inventory_box">
