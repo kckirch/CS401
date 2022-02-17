@@ -127,7 +127,7 @@
             <li>
                 Jordan 1
             </li>
-
+ 
         </aside>
 
     </main>
