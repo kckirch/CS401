@@ -49,6 +49,7 @@ body{
 }
 
 .flex-main{
+    align
     display: flex;
     flex: 1;
 }
