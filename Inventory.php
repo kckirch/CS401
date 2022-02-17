@@ -1,15 +1,18 @@
 <html lang="en"></html>
 <head>
     <title>Rinventory</title>
-    <link rel="stylesheet" href="inventory.css">
+    <link rel="icon"  href="/art/favicon.ico?v=2" type="image/ico"/>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="//db.onlinewebfonts.com/c/03d5b20d124cd26dc873bd4a8e42313e?family=Suisse+Int'l" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
-<header class="flex-header-1">
+    <header class="flex-header-1">
         
-        <img src="/art/headerLogo.png" alt="logo"/>
-        <hr> 
+        <img src="/art/headerLogo.png" alt="logo" />
+        <hr>
     </header>
 
     <header class="flex-header-2">
@@ -21,7 +24,7 @@
                 </li>
                <li>
                     <a href="/inventory.php">Inventory </a>
-                </li> 
+                </li>
                <li>
                     <a href="/login.php">Login </a>
                 </li>
@@ -30,7 +33,7 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </header> 
 
     <main class="flex-main">
 
@@ -40,62 +43,97 @@
         </nav>
 
         <article class="main-content">
-            Your Inventory
-            <br>
-            A table will go here
-            <br>
-            Item | Purchase Price | Sale Price | Notes
-            
-
-            <form method="POST" action="inventory_handler.php">
-            <div class="inventory_box">
-                <label for="brand">Brand:</label>
-                <input type="text" id="brand" name="brand">
-            </div>
-
-            <div class="inventory_box">
-                <label for="style">Style:</label>
-                <input type="style" id="style" name="style">
-            </div>
-                <input type="submit" value="Submit">
-            </form>
-
-            <table id="inventory">
-                <thead>
-                    <tr>
-                        <th>Brand</th>
-                        <th>Style</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-                    $contents = file_get_contents("posted_inventory.txt"); 
-                    $inventory_Lists = explode("\n", trim($contents));
-                    foreach ($inventory_Lists as $inventory_List) {
-                        list($brand, $style) = explode("|", trim($inventory_List));
-                        echo "<tr><td>{$brand}</td><td>{$style}</td></tr>";
-                    }
-                ?>
-                </tbody>
-            </table>
-
-
-
-
+            <strong>Welcome to <em>Rinventory</em></strong>
+            <p> here will go total amount of items in quantity and value</p> 
         </article>
 
         <aside class="right-sidebar">
             Up Coming Releases
-
             <hr>
-            <br>
-            another table will be used here to show the releases properly
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+            <li>
+                Jordan 1
+            </li>
+
         </aside>
 
     </main>
 
     <footer class="flex-footer">
-        FOOTER
+        Rinventory - Your inventory manager 2022 !
     </footer>
 
 </body>
