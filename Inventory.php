@@ -34,23 +34,58 @@ $inventorys = $dao->getInventory();
 
         <article class="main-content">
             Your Inventory
-            <br>
-            A table will go here
-            <br>
-            Item | Purchase Price | Sale Price | Notes
+          
             
 
             <form method="POST" action="inventory_handler.php">
-            <div class="inventory_box">
-                <label for="brand">Brand:</label>
-                <input type="text" id="brand" name="brand">
-            </div>
 
-            <div class="inventory_box">
-                <label for="style">Style:</label>
-                <input type="style" id="style" name="style">
-            </div>
-                <input type="submit" value="Submit">
+                <div class="inventory_box">
+                    <label for="Brand">Brand:</label>
+                    <input type="text" id="Brand" name="Brand">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="Model">Model:</label>
+                    <input type="text" id="Model" name="Model">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="Colorway">Colorway:</label>
+                    <input type="text" id="Colorway" name="Colorway">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="Size">Size:</label>
+                    <input type="text" id="Size" name="Size">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="RetailPrice">Retail:</label>
+                    <input type="text" id="RetailPrice" name="RetailPrice">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="SalePrice">Resell:</label>
+                    <input type="text" id="SalePrice" name="SalePrice">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="StyleCode">Style Code:</label>
+                    <input type="text" id="StyleCode" name="StyleCode">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="ItemCondition">Condition:</label>
+                    <input type="text" id="ItemCondition" name="ItemCondition">
+                </div>
+
+                <div class="inventory_box">
+                    <label for="Notes">Notes:</label>
+                    <input type="text" id="Notes" name="Notes">
+                </div>
+
+
+                    <input type="submit" value="Submit">
             </form>
 
             <table id="inventorys">
@@ -72,7 +107,7 @@ $inventorys = $dao->getInventory();
 
 
                 <?php
-
+                    #displays the inventory data as a table
                     foreach ($inventorys as $inventory) {
                         
                         echo "<tr>
@@ -87,9 +122,13 @@ $inventorys = $dao->getInventory();
                             <td>{$inventory['StyleCode']}</td>
                             <td>{$inventory['ItemCondition']}</td>
                             <td>{$inventory['Notes']}</td>
+
+
                             
                             </tr>";
+   
                     }
+                   
                 ?>
                 </tbody>
             </table>
