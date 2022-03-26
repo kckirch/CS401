@@ -4,30 +4,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
  
-<body>
+<body id="aboutBodyID">
 
-<header class="flex-header-1">
-        
-        <img src="/art/headerLogo.png" alt="logo" />
-        <hr>
+    <header class="flex-header-1">
+        <?php include "header.php"?>
     </header>
 
     <header class="flex-header-2">
-        <div id="directory-Menu">
-            <ul>
-                <!-- these need to be href for each page -->
-                <li>
-                    <a href="/index.html">Home </a>   
-                </li>
-
-               <li>
-                    <a href="/login.php">Login </a>
-                </li>
-                <li>
-                    <a href="/about.php">About </a>
-                </li>
-            </ul>
-        </div>
+        <?php include "nav.php"?>
     </header>
 
     <main class="flex-main">
@@ -49,7 +33,7 @@
     </main>
 
     <footer class="flex-footer">
-        FOOTER
+        <?php include "footer.php"?>
     </footer>
 
 </body>

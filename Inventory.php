@@ -1,35 +1,28 @@
+
+<?php
+
+require_once 'Dao.php';
+$dao = new Dao();
+$inventorys = $dao->getInventory();
+
+?>
+
+
+
 <html lang="en"></html>
 <head>
     <title>Rinventory</title>
-    <link rel="stylesheet" href="inventory.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="inventoryBodyID">
 
-<header class="flex-header-1">
-        
-        <img src="/art/headerLogo.png" alt="logo"/>
-        <hr> 
+    <header class="flex-header-1">
+        <?php include "header.php"?>
     </header>
 
     <header class="flex-header-2">
-        <div id="directory-Menu">
-            <ul>
-                <!-- these need to be href for each page -->
-                <li>
-                    <a href="/index.html">Home </a>   
-                </li>
-               <li>
-                    <a href="/inventory.php">Inventory </a>
-                </li> 
-               <li>
-                    <a href="/login.php">Login </a>
-                </li>
-                <li>
-                    <a href="/about.php">About </a>
-                </li>
-            </ul>
-        </div>
+        <?php include "nav.php"?>
     </header>
 
     <main class="flex-main">
@@ -60,20 +53,42 @@
                 <input type="submit" value="Submit">
             </form>
 
-            <table id="inventory">
+            <table id="inventorys">
                 <thead>
                     <tr>
+                        <th>Number</th>
                         <th>Brand</th>
-                        <th>Style</th>
+                        <th>Model</th>
+                        <th>Colorway</th>
+                        <th>Size</th> 
+                        <th>Retail</th>
+                        <th>Resell</th>
+                        <th>Style Code</th>
+                        <th>Condition</th>
+                        <th>Notes</th>
                     </tr>
                 </thead>
                 <tbody>
+
+
                 <?php
-                    $contents = file_get_contents("posted_inventory.txt"); 
-                    $inventory_Lists = explode("\n", trim($contents));
-                    foreach ($inventory_Lists as $inventory_List) {
-                        list($brand, $style) = explode("|", trim($inventory_List));
-                        echo "<tr><td>{$brand}</td><td>{$style}</td></tr>";
+
+                    foreach ($inventorys as $inventory) {
+                        
+                        echo "<tr>
+
+                            <td>{$inventory['inv_num']}</td>
+                            <td>{$inventory['Brand']}</td>
+                            <td>{$inventory['Model']}</td>
+                            <td>{$inventory['Colorway']}</td>
+                            <td>{$inventory['Size']}</td>
+                            <td>{$inventory['RetailPrice']}</td>
+                            <td>{$inventory['SalePrice']}</td>
+                            <td>{$inventory['StyleCode']}</td>
+                            <td>{$inventory['ItemCondition']}</td>
+                            <td>{$inventory['Notes']}</td>
+                            
+                            </tr>";
                     }
                 ?>
                 </tbody>
@@ -95,17 +110,10 @@
     </main>
 
     <footer class="flex-footer">
-        FOOTER
+        <?php include "footer.php"?>
     </footer>
 
 </body>
-
-
-
-    
-        
-
-    
 
 
 </html>

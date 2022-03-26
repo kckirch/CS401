@@ -21,6 +21,32 @@ body{
     font-family: Suisse Int'l;
     
 }
+.login {
+    font-size: 20px;
+}
+
+#loginTitle{
+    font-size: 30px;
+}
+
+.text_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.txt_field label{
+    top: 50%;
+    left: 5px;
+    color: #312d2d;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+
+
+
 
 .flex-header-1{
     
@@ -42,10 +68,42 @@ body{
     text-align: justify;
     display: inline;
 }
+
+#indexBodyID #indexNavID, #loginBodyID #loginNavID, #aboutBodyID #aboutNavID, #inventoryBodyID #inventoryNavID{
+    
+    
+    background-color: rgb(100, 148, 187);
+}
+
+
+a:link{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #F4F4F4;
+    text-decoration: none;
+}
+
+a:hover{
+    color:aqua;
+    text-decoration: underline;
+}
+
+
+
 /* this is makes our directory list horizontal */
 #directory-Menu li{
+    color: #F4F4F4;
+    font-weight: 800;
     display: inline;
+    padding: 4px;
+    
 }
+
+
 
 .flex-main{
     display: flex;

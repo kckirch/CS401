@@ -23,6 +23,8 @@ body{
     
 }
 
+
+
 .flex-header-1{
     
     text-align: left;
@@ -46,6 +48,7 @@ body{
 /* this is makes our directory list horizontal */
 #directory-Menu li{
     display: inline;
+    padding: 9px;
 }
 
 .flex-main{
