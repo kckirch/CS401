@@ -1,54 +1,63 @@
+
+
+
+
 <html lang="en"></html>
 <head>
     <title>Rinventory</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="loginBodyID">
 
-<header class="flex-header-1">
-        
-        <img src="/art/headerLogo.png" alt="logo" />
-        <hr>
-    </header>  
+    <header class="flex-header-1">
+        <?php include "header.php"?>
+    </header>
 
     <header class="flex-header-2">
-        <div id="directory-Menu">
-            <ul>
-                <!-- these need to be href for each page -->
-                <li>
-                    <a href="/index.html">Home </a>   
-                </li>
-               <li>
-                    <a href="/login.php">Login </a>
-                </li>
-                <li>
-                    <a href="/about.php">About </a>
-                </li>
-            </ul>
-        </div>
+        <?php include "nav.php"?>
     </header>
 
     <main class="flex-main">
 
-        <nav class="left-sidebar">
-            Your Top Items
-            <hr>
-        </nav>
+
 
         <article class="main-content">
-            <strong>Welcome to <em>Rinventory</em></strong>
+            <div class="login">
+                <div id="loginTitle">Login</div>
+            
+            
+                <form method="post">
+                    <div class="txt_field">
+                        <label>Username</label>
+                        <input type="text" required>
+                        
+                    </div>
+
+                    <div class="txt_field">
+                        <label>Password</label>
+                        <input type="password" required>
+                        
+                    </div>
+
+                    
+
+                    <input type="submit" value="Login">
+
+                    <div class="signup_link">
+                        Not a member? <a href="#">Signup</a>
+                    </div>
+                </form>
+            </div>
+
         </article>
 
-        <aside class="right-sidebar">
-            Up Coming Releases
-            <hr>
-        </aside>
+
 
     </main>
 
     <footer class="flex-footer">
-        FOOTER
+        <?php include "footer.php"?>
     </footer>
 
 </body>
