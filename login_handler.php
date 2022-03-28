@@ -8,6 +8,7 @@
     require_once 'Dao.php';
 
     $dao = new Dao();
+    
     $_SESSION['authenticated'] = $dao->userExist($email, $password);
 
 
