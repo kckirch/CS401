@@ -27,7 +27,7 @@
                 <div id="loginTitle">Login</div>
             
             
-                <form method="post" action="login_handler.php/">
+                <form method="post" action="login_handler.php">
                     <div class="txt_field">
                         <label>Email</label>
                         <input type="text" id="email" name="email"required>

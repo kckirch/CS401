@@ -4,6 +4,8 @@
   $dao = new Dao();
   
   $dao->deleteInventory($_GET['inv_num']);
+  
   header('Location: inventory.php');
   exit;
-  ?>
+  
+?>

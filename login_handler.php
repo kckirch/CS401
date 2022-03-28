@@ -1,4 +1,6 @@
 <?php
+
+
     session_start();
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -10,10 +12,10 @@
 
 
     if ($_SESSION['authenticated']){
-        header('Location: inventory.php/');
+        header('Location: inventory.php');
         exit;
     } else{
-        header('Location: login.php/');
+        header('Location: login.php');
         exit;
     }
 

@@ -27,7 +27,7 @@
                 <div id="signUp"><h1> Sign Up </h1></div>
             
             
-                <form method="post" action="signup_handler.php/">
+                <form method="post" action="signup_handler.php">
                     <div class="txt_field">
                         <label>Email</label>
                         <input type="text" id="email" name="email"required>
@@ -51,9 +51,7 @@
             </div>
 
 
-        <?php
-        echo $_POST['email'], $_POST['password'];
-        ?>
+
 
         </article>
 
