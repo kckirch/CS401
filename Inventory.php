@@ -69,12 +69,12 @@ $inventorys = $dao->getInventory();
 
                     <div class="inventory_box">
                         <label>Retail</label>
-                        <input type="text" id="retailprice" name="retailprice" required>
+                        <input type="number" id="retailprice" name="retailprice" pattern="^[1-9]+[0-9]*$" required>
                     </div>
 
                     <div class="inventory_box">
                         <label>Resell</label>
-                        <input type="text" id="saleprice" name="saleprice" required>
+                        <input type="number" id="saleprice" name="saleprice" pattern="^[1-9]+[0-9]*$" required>
                     </div>
 
                     <div class="inventory_box">
@@ -89,7 +89,7 @@ $inventorys = $dao->getInventory();
 
                     <div class="inventory_box">
                         <label>Notes</label>
-                        <input type="text" id="notes" name="notes" required>
+                        <input type="text" id="notes" name="notes">
                     </div>
 
 
