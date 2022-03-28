@@ -2,12 +2,17 @@
 
 
    class Dao{
+      //local login
+      // public $dsn='mysql:dbname=rinventory;host=127.0.0.1';
+      // public $user="root";
+      // public $password="kckc";
 
-      public $dsn='mysql:dbname=rinventory;host=127.0.0.1';
-      public $user="root";
-      public $password="kckc";
+      //heroku database
+      private $dsn='mysql:dbname=heroku_56130100e745e40;host=us-cdbr-east-05.cleardb.net';
+      private $user="b9cae243c7a38d";
+      private $password="4082f1ae";
 
-      private function getConection(){
+      public function getConection(){
          try{
             $conn = new PDO($this->dsn, $this->user, $this->password);
          }
