@@ -1,5 +1,6 @@
 <html lang="en"></html>
 <head>
+    
     <title>Rinventory</title>
     <link rel="icon"  href="/art/favicon.ico?v=2" type="image/ico"/>
     <link rel="stylesheet" href="style.css">

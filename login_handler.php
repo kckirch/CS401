@@ -13,9 +13,11 @@
 
 
     if ($_SESSION['authenticated']){
+        
         header('Location: inventory.php');
         exit;
     } else{
+        
         header('Location: login.php');
         exit;
     }
