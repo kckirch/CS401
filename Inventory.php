@@ -9,7 +9,7 @@ if (!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
 
 require_once 'Dao.php';
 $dao = new Dao();
-$inventorys = $dao->getInventory();
+$inventorys = $dao->getInventory();  
 
 ?>
 
