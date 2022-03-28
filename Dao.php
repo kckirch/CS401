@@ -52,39 +52,29 @@
       }
 
 
-      public function insertInventory($Brand, $Model, $Colorway, $Size, $RetailPrice, $SalePrice, $StyleCode, $ItemCondition, $Notes){
-      
+      public function insertInventory($brand, $model, $colorway, $size, $retailprice, $saleprice, $stylecode, $itemcondition, $notes){
          $conn = $this->getConection();
          try{
 
+            $saveQuery = 
+               "INSERT INTO inventory 
+               (Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
+               VALUES 
+               (:brand, :model, :colorway, :size, :retailprice, :saleprice, :stylecode, :itemcondition, :notes)";
 
-         $saveQuery = 
-         
-            "INSERT INTO inventory
-            ( Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
+            $q = $conn->prepare($saveQuery);
 
-            VALUES 
+            $q->bindParam(":brand", $brand);
+            $q->bindParam(":model", $model);
+            $q->bindParam(":colorway", $colorway);
+            $q->bindParam(":size", $size);
+            $q->bindParam(":retailprice", $retailprice);
+            $q->bindParam(":saleprice", $saleprice);
+            $q->bindParam(":stylecode", $stylecode);
+            $q->bindParam(":itemcondition", $itemcondition);
+            $q->bindParam(":notes", $notes);
+            $q->execute();
 
-           
-            (:Brand, :Model, :Colorway, :Size, :RetailPrice, :SalePrice, :StyleCode, :ItemCondition, :Notes)";
-             #( '$Brand', '$Model', '$Colorway', '$Size', '$RetailPrice', '$SalePrice', '$StyleCode', '$ItemCondition', '$Notes')";
-
-            
-            #   going to leave dropable table in to test.            using '$varname' worked somehow so issue is with bindParam     when I try and use bindParam values the form will not send info
-            #(:Brand, :Model, :Colorway, :Size, :RetailPrice, :SalePrice, :StyleCode, :ItemCondition, :Notes)";
-      
-         $q = $conn->prepare($saveQuery);
-
-         $q->bindParam(":Brand", $Brand);
-         $q->bindParam(":Model", $Model);
-         $q->bindParam(":Colorway", $Colorway);
-         $q->bindParam(":Size", $Size);
-         $q->bindParam(":RetailPrice", $RetailPrice);
-         $q->bindParam(":SalePrice", $SalePrice);
-         $q->bindParam(":StyleCode", $StyleCode);
-         $q->bindParam(":ItemCondition", $ItemCondition);
-         $q->bindParam(":Notes", $Notes);
-         $q->execute();
          }catch(Exception $e){
             echo print_r($e,1);
             exit;
@@ -122,11 +112,14 @@
    }
 
    #for testing if working
-   #$dao = new Dao();
-
+   // $dao = new Dao();
+   // $dao->deleteInventory('92');
+   // $dao->insertInventory('YeezyTest', 'Testing', 'ForceInsert', 'Big', '100', '150', 'Forced', 'Test', 'FromDao');
 
    #$dao->insertUser($_POST['email'], $_POST['password']);
-   #$dao->insertInventory('Brand', 'Model', 'Colorway', 'Size', '100', '150', 'StyleCode', 'ItemCondition', 'Notes');
+   
+   #$dao->insertInventory($_POST[`Brand`], $_POST[`Model`], $_POST[`Colorway`], $_POST[`Size`], $_POST[`RetailPrice`], $_POST[`SalePrice`], $_POST[`StyleCode`], $_POST[`ItemCondition`], $_POST[`Notes`]);
+
 
    #$dao->userExist('admin', 'admin');
    

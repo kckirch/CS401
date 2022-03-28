@@ -40,60 +40,62 @@ $inventorys = $dao->getInventory();
         </nav>
 
         <article class="main-content">
-            Your Inventory
-          
+
+            <div class="inventory">
+                Your Inventory
             
+                
+                <form method="post" action="inventory_handler.php/">
 
-            <form method="POST" action="inventory_handler.php">
+                    <div class="inventory_box">
+                        <label>Brand</label>
+                        <input type="text" id="brand" name="brand" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="Brand">Brand:</label>
-                    <input type="text" id="Brand" name="Brand">
-                </div>
+                    <div class="inventory_box">
+                        <label>Model</label>
+                        <input type="text" id="model" name="model" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="Model">Model:</label>
-                    <input type="text" id="Model" name="Model">
-                </div>
+                    <div class="inventory_box">
+                        <label>Colorway</label>
+                        <input type="text" id="colorway" name="colorway" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="Colorway">Colorway:</label>
-                    <input type="text" id="Colorway" name="Colorway">
-                </div>
+                    <div class="inventory_box">
+                        <label>Size</label>
+                        <input type="text" id="size" name="size" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="Size">Size:</label>
-                    <input type="text" id="Size" name="Size">
-                </div>
+                    <div class="inventory_box">
+                        <label>Retail</label>
+                        <input type="text" id="retailprice" name="retailprice" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="RetailPrice">Retail:</label>
-                    <input type="text" id="RetailPrice" name="RetailPrice">
-                </div>
+                    <div class="inventory_box">
+                        <label>Resell</label>
+                        <input type="text" id="saleprice" name="saleprice" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="SalePrice">Resell:</label>
-                    <input type="text" id="SalePrice" name="SalePrice">
-                </div>
+                    <div class="inventory_box">
+                        <label>Style Code</label>
+                        <input type="text" id="stylecode" name="stylecode" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="StyleCode">Style Code:</label>
-                    <input type="text" id="StyleCode" name="StyleCode">
-                </div>
+                    <div class="inventory_box">
+                        <label>Condition</label>
+                        <input type="text" id="itemcondition" name="itemcondition" required>
+                    </div>
 
-                <div class="inventory_box">
-                    <label for="ItemCondition">Condition:</label>
-                    <input type="text" id="ItemCondition" name="ItemCondition">
-                </div>
-
-                <div class="inventory_box">
-                    <label for="Notes">Notes:</label>
-                    <input type="text" id="Notes" name="Notes">
-                </div>
+                    <div class="inventory_box">
+                        <label>Notes</label>
+                        <input type="text" id="notes" name="notes" required>
+                    </div>
 
 
                     <input type="submit" value="Submit">
-            </form>
+                </form>
+            </div>
 
             <table id="inventorys">
                 <thead>
@@ -118,7 +120,7 @@ $inventorys = $dao->getInventory();
                 
 
                     #displays the inventory data as a table
-                    echo"<table>";
+                   
                     foreach ($inventorys as $inventory) {
                         
                         echo "<tr>";
