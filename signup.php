@@ -23,11 +23,11 @@
 
 
         <article class="main-content">
-            <div class="login">
-                <div id="loginTitle">Login</div>
+            <div class="signUp">
+                <div id="signUp"><h1> Sign Up </h1></div>
             
             
-                <form method="post" action="login_handler.php/">
+                <form method="post" action="signup_handler.php/">
                     <div class="txt_field">
                         <label>Email</label>
                         <input type="text" id="email" name="email"required>
@@ -42,13 +42,18 @@
 
                     
 
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Create Account">
 
                     <div class="signup_link">
-                        Not a member? <a href="signup.php">Signup</a>
+                        Have an account? <a href="login.php">Login</a>
                     </div>
                 </form>
             </div>
+
+
+        <?php
+        echo $_POST['email'], $_POST['password'];
+        ?>
 
         </article>
 

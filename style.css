@@ -135,6 +135,10 @@ a:hover{
     padding-bottom: 1rem;
 }
 
+#logout {
+    float: right ;
+}
+
 /* This will make the flex boxes stack when smaller than width */
 @media all and (max-width: 540px){
     .flex-main {
