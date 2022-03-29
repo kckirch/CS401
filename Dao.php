@@ -61,13 +61,20 @@
          $conn = $this->getConection();
          try{
 
-            $saveQuery = 
-               "INSERT INTO inventory 
-               (Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
-               VALUES 
-               (:brand, :model, :colorway, :size, :retailprice, :saleprice, :stylecode, :itemcondition, :notes)";
+            // $saveQuery = 
+            //    "INSERT INTO inventory 
+            //    (Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
+            //    VALUES 
+            //    (:brand, :model, :colorway, :size, :retailprice, :saleprice, :stylecode, :itemcondition, :notes)";
+            // $q = $conn->prepare($saveQuery);
 
-            $q = $conn->prepare($saveQuery);
+            //this is me making these identical to insertUser
+            $q = $conn->prepare("INSERT INTO inventory
+            (Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
+            VALUES 
+            (:brand, :model, :colorway, :size, :retailprice, :saleprice, :stylecode, :itemcondition, :notes)");
+
+
 
             $q->bindParam(":brand", $brand);
             $q->bindParam(":model", $model);
