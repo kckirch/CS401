@@ -126,7 +126,7 @@
    #for testing if working
    // $dao = new Dao();
    // $dao->deleteInventory('92');
-   // $dao->insertInventory('YeezyTest', 'Testing', 'ForceInsert', 'Big', '100', '150', 'Forced', 'Test', 'FromDao');
+   // $dao->insertInventory('Test', 'Testing', 'ForceInsert', 'Big', '100', '150', 'Forced', 'Test', 'FromDao');
 
    #$dao->insertUser($_POST['email'], $_POST['password']);
    
