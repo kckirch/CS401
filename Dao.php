@@ -62,15 +62,15 @@
          try{
 
             // $saveQuery = 
-            //    "INSERT INTO inventory 
-            //    (Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
+            //    "INSERT INTO inventory_table 
+            //    (brand, model, colorway, size, retailprice, saleprice, stylecode, itemcondition, notes) 
             //    VALUES 
             //    (:brand, :model, :colorway, :size, :retailprice, :saleprice, :stylecode, :itemcondition, :notes)";
             // $q = $conn->prepare($saveQuery);
 
             //this is me making these identical to insertUser
-            $q = $conn->prepare("INSERT INTO inventory
-            (Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes) 
+            $q = $conn->prepare("INSERT INTO inventory_table
+            (brand, model, colorway, size, retailprice, saleprice, stylecode, itemcondition, notes) 
             VALUES 
             (:brand, :model, :colorway, :size, :retailprice, :saleprice, :stylecode, :itemcondition, :notes)");
 
@@ -112,7 +112,7 @@
          $conn = $this->getConection();
 
          try{
-            $rows = $conn->query("select inv_num, Brand, Model, Colorway, Size, RetailPrice, SalePrice, StyleCode, ItemCondition, Notes from inventory", PDO::FETCH_ASSOC);
+            $rows = $conn->query("select inv_num, brand, model, colorway, size, retailprice, saleprice, stylecode, itemcondition, notes from inventory_table", PDO::FETCH_ASSOC);
          }
          catch(Exception $e){
             echo print_r($e,1);

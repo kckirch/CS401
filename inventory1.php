@@ -125,21 +125,21 @@ $inventorys = $dao->getInventory();
                         
                         echo "<tr>";
                         echo "<td>" . ($inventory["inv_num"]) . "</td>";
-                        echo "<td>" . ($inventory["Brand"]) . "</td>";
-                        echo "<td>" . ($inventory["Model"]) . "</td>";
-                        echo "<td>" . ($inventory["Colorway"]) . "</td>";
-                        echo "<td>" . ($inventory["Size"]) . "</td>";
-                        echo "<td>" . ($inventory["RetailPrice"]) . "</td>";
-                        echo "<td>" . ($inventory["SalePrice"]) . "</td>";
-                        echo "<td>" . ($inventory["StyleCode"]) . "</td>";
-                        echo "<td>" . ($inventory["ItemCondition"]) . "</td>";
-                        echo "<td>" . ($inventory["Notes"]) . "</td>";
+                        echo "<td>" . ($inventory["brand"]) . "</td>";
+                        echo "<td>" . ($inventory["model"]) . "</td>";
+                        echo "<td>" . ($inventory["colorway"]) . "</td>";
+                        echo "<td>" . ($inventory["size"]) . "</td>";
+                        echo "<td>" . ($inventory["retailprice"]) . "</td>";
+                        echo "<td>" . ($inventory["saleprice"]) . "</td>";
+                        echo "<td>" . ($inventory["stylecode"]) . "</td>";
+                        echo "<td>" . ($inventory["itemcondition"]) . "</td>";
+                        echo "<td>" . ($inventory["notes"]) . "</td>";
                         echo "<td> <a href='delete_handler.php?id={$inventory['inv_num']}'>X</a> </td>";
                         echo "</tr>";
    
                     }
                    
-                    echo"</table>";
+                    #echo"</table>";
 
                 ?>
                 </tbody>
