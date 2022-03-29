@@ -134,7 +134,7 @@ $inventorys = $dao->getInventory();
                         echo "<td>" . ($inventory["stylecode"]) . "</td>";
                         echo "<td>" . ($inventory["itemcondition"]) . "</td>";
                         echo "<td>" . ($inventory["notes"]) . "</td>";
-                        echo "<td> <a href='delete_handler.php?id={$inventory['inv_num']}'>X</a> </td>";
+                        echo "<td class='delete'> <a href='delete_handler.php?id={$inventory['inv_num']}'>X</a> </td>";
                         echo "</tr>";
    
                     }

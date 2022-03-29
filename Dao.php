@@ -48,9 +48,9 @@
       }
 
       public function deleteInventory($inv_num){
-         $conn = $this->getConection();
 
-         $deleteQuery = "delete from inventory where inv_num = :inv_num";
+         $conn = $this->getConection();
+         $deleteQuery = "delete from inventory_table where inv_num = :inv_num";
          $q = $conn->prepare($deleteQuery);
          $q->bindParam(":inv_num", $inv_num);
          $q->execute();
@@ -118,12 +118,11 @@
 
    #for testing if working
    // $dao = new Dao();
-   // $dao->deleteInventory('92');
+   // $dao->deleteInventory("54");
    // $dao->insertInventory('Test', 'Testing', 'ForceInsert', 'Big', '100', '150', 'Forced', 'Test', 'FromDao');
 
    #$dao->insertUser($_POST['email'], $_POST['password']);
    
-   #$dao->insertInventory($_POST[`Brand`], $_POST[`Model`], $_POST[`Colorway`], $_POST[`Size`], $_POST[`RetailPrice`], $_POST[`SalePrice`], $_POST[`StyleCode`], $_POST[`ItemCondition`], $_POST[`Notes`]);
 
 
    #$dao->userExist('admin', 'admin');
