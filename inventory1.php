@@ -45,7 +45,7 @@ $inventorys = $dao->getInventory();
                 Your Inventory
             
                 
-                <form method="post" action="inventory_handler.php/">
+                <form method="post" action="/inventory_handler.php/">
 
                     <div class="inventory_box">
                         <label>Brand</label>

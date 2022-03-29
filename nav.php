@@ -5,7 +5,7 @@
                     <a href="/index.php">HOME </a>   
                 </li>
                 <li id="inventoryNavID">
-                    <a href="/inventory.php">INVENTORY </a>   
+                    <a href="/inventory1.php">INVENTORY </a>   
                 </li>
                <li id="loginNavID">
                     <a href="/login.php">LOGIN </a>
