@@ -14,7 +14,7 @@ session_start();
     <header class="flex-header-1">
         <?php include "header.php"?>
 
-        <span id="logout"><a href="logout.php">Logout</a></span>
+        
         
 
 
