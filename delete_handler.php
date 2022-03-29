@@ -3,8 +3,8 @@
   require_once 'Dao.php';
   $dao = new Dao();
   
-  $q->prepare($dao->deleteInventory($_GET['id']));
-  $q->execute();
+  $dao->deleteInventory($_GET['id']);
+  
   
   header('Location: inventory1.php');
   exit;
