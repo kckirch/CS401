@@ -41,11 +41,11 @@ $inventorys = $dao->getInventory();
 
         <article class="main-content">
 
-            <div class="inventory">
+            <div class="inventoryTitle">
                 Your Inventory
             
                 
-                <form method="post" action="/inventory_handler.php/">
+                <form method="post" action="inventory_handler.php">
 
                     <div class="inventory_box">
                         <label>Brand</label>
