@@ -1,5 +1,6 @@
-
-
+<?php
+session_start();
+?>
 
 
 <html lang="en"></html>
@@ -35,7 +36,8 @@
                 <form method="post" action="login_handler.php">
                     <div class="txt_field">
                         <label>Email</label>
-                        <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES); ?>" required>
+                        
+                        <input type="text" id="email" name="email" value="" required>
                         
                     </div>
 

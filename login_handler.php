@@ -4,7 +4,9 @@
     session_start();
     $email = $_POST['email'];
     $password = $_POST['password'];
-
+    
+    $_SESSION['email'] = $_POST['email'];
+    
     require_once 'Dao.php';
 
     $dao = new Dao();
@@ -17,6 +19,7 @@
         header('Location: inventory1.php');
         exit;
     } else{
+        
         
         header('Location: login.php');
         exit;
