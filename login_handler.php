@@ -14,7 +14,7 @@
 
     if ($_SESSION['authenticated']){
         
-        header('Location: inventory.php');
+        header('Location: inventory1.php');
         exit;
     } else{
         
