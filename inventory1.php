@@ -16,7 +16,7 @@ $inventorys = $dao->getInventory();
 
 ?>
 
-
+ 
 
 <html lang="en"></html>
 <head>
