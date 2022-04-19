@@ -1,3 +1,6 @@
+<head>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
 
 <?php
 
@@ -42,7 +45,7 @@ $inventorys = $dao->getInventory();
         <article class="main-content">
 
             <div class="inventoryTitle">
-                Your Inventory
+                <h2>Your Inventory</h2>
             
                 
                 <form method="post" action="inventory_handler.php">
@@ -94,6 +97,10 @@ $inventorys = $dao->getInventory();
 
 
                     <input type="submit" value="Submit">
+                    
+
+
+                    
                 </form>
             </div>
 

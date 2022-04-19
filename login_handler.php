@@ -24,10 +24,6 @@
         header('Location: login.php');
         exit;
     }
+    
 
-    // if (!$dao->userExist($email, $password)){
-    //     echo "user not found";
-    // } else{
-    //     echo "user found";
-    // }
 

@@ -24,12 +24,85 @@
 
       public function userExist($email, $password){
          $conn = $this->getConection();
+
          try{
-            $q = $conn->prepare("select count(*) as total from loginform where user = :email and pass = :password");
-            $q->bindParam(":email", $email);
-            $q->bindParam(":password", $password);
-            $q->execute();
-            $rows = $q->fetch();
+            
+
+            //if username exists now check for password match
+            //check for username
+            
+               $q = $conn->prepare("select count(*) as total from loginform where user = :email");
+               $q->bindParam(":email", $email);
+
+               $q->execute();
+               
+               $rows = $q->fetch();
+               
+               
+              
+
+               //if username is found enter
+               if ($rows['total'] == 1){
+
+                  
+
+                  //get the hashed password to be stored
+                  $q = $conn->prepare("select pass as info from loginform where user = :email");
+                  $q->bindParam(":email", $email);
+
+                  $q->execute();
+                  
+                   $hash = $q->fetch();
+
+                  // echo $hash['info'];
+
+
+                  
+                  //$hashed = '$2y$10$ghTDEDELIjbL1EXO/KlIb.Um5vhBQZvaBHbRw0';
+
+                  //testing
+                  //if it matches the user
+                  if ( password_verify('$password', $hash['info']) ){
+                     echo "success";
+                  }else{
+                     //echo "pass did not verify ";
+                     // echo "this should be your pass \n";
+
+                     // echo $ha = password_hash('kck', PASSWORD_DEFAULT);
+
+                     // echo "here      ";
+                     // echo password_verify('kck', $ha);
+
+                     // echo "      here      ";
+
+                     // echo "\n";
+                     // echo $hash['info'];
+                     // echo "\n";
+                  }
+               }
+
+
+
+            
+            
+
+
+
+
+               //if username exists
+
+            
+
+
+
+         //    $q = $conn->prepare("select count(*) as total from loginform where user = :email and pass = :password");
+            
+         //    $q->bindParam(":email", $email);
+         //    $q->bindParam(":password", password_verify($password, $password));
+         //   // $q->bindParam(":password", $password);
+
+         //    $q->execute();
+         //    $rows = $q->fetch();
 
          }catch(Exception $e){
             echo print_r($e,1);
@@ -38,9 +111,10 @@
          #for testing
          #echo print_r($rows,1);
 
-         if ($rows['total'] == 1){
+         if ($rows['total'] == 1) {
             return true;
          }else{
+            echo "I returned flase here";
             return false;
          }
          
@@ -92,7 +166,7 @@
          try{
             $q = $conn->prepare("INSERT INTO loginform (user, pass) VALUES (:email, :password)");
             $q->bindParam(":email", $email);
-            $q->bindParam(":password", $password);
+            $q->bindParam(":password",password_hash($password, PASSWORD_DEFAULT));
             $q->execute();
 
          }catch(Exception $e){
@@ -117,7 +191,7 @@
    }
 
    #for testing if working
-   // $dao = new Dao();
+   $dao = new Dao();
    // $dao->deleteInventory("54");
    // $dao->insertInventory('Test', 'Testing', 'ForceInsert', 'Big', '100', '150', 'Forced', 'Test', 'FromDao');
 
@@ -125,7 +199,7 @@
    
 
 
-   #$dao->userExist('admin', 'admin');
+   $dao->userExist('kck', 'kck');
    
    
 

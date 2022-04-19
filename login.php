@@ -35,14 +35,14 @@ session_start();
             
                 <form method="post" action="login_handler.php">
                     <div class="txt_field">
-                        <label>Email</label>
+                        <label for="email">Email</label>
                         
                         <input type="text" id="email" name="email" value="" required>
                         
                     </div>
 
                     <div class="txt_field">
-                        <label>Password</label>
+                        <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
                         
                     </div>
@@ -59,7 +59,7 @@ session_start();
 
         </article>
 
-
+bcrypt
 
     </main>
 
